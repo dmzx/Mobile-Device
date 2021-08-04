@@ -10,7 +10,7 @@
 namespace sniper\mobiledevice\controller;
 
 use phpbb\config\config;
-use phpbb\log\log_interface;
+use phpbb\log\log;
 use phpbb\request\request;
 use phpbb\template\template;
 use phpbb\user;
@@ -23,7 +23,7 @@ class admin_controller
 	/** @var template */
 	protected $template;
 
-	/** @var log_interface */
+	/** @var log */
 	protected $log;
 
 	/** @var user */
@@ -40,14 +40,14 @@ class admin_controller
 	 *
 	 * @param config		$config
 	 * @param template		$template
-	 * @param \phpbb\log\log_interface 	$log
+	 * @param log 	        $log
 	 * @param user			$user
 	 * @param request		$request
 	 */
 	public function __construct(
 		config $config,
 		template $template,
-		log_interface $log,
+		log $log,
 		user $user,
 		request $request
 	)
