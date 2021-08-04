@@ -78,9 +78,9 @@ class mobilelogs
 	)
 	{
 		$this->functions		= $functions;
-		$this->template		 = $template;
-		$this->user			 = $user;
-		$this->auth			 = $auth;
+		$this->template		    = $template;
+		$this->user			    = $user;
+		$this->auth			    = $auth;
 		$this->db				= $db;
 		$this->request			= $request;
 		$this->config			= $config;
