@@ -9,7 +9,6 @@
 
 namespace sniper\mobiledevice\controller;
 
-use;
 use phpbb\config\config;
 use phpbb\log\log_interface;
 use phpbb\request\request;
