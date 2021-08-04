@@ -9,32 +9,41 @@
 
 namespace sniper\mobiledevice\event;
 
+use phpbb\auth\auth;
+use phpbb\config\config;
+use phpbb\controller\helper;
+use phpbb\db\driver\driver_interface;
+use phpbb\request\request;
+use phpbb\request\request_interface;
+use phpbb\template\template;
+use phpbb\user;
+use sniper\mobiledevice\core\functions;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class listener implements EventSubscriberInterface
 {
-	/** @var \sniper\mobiledevice\core\functions */
+	/** @var functions */
 	protected $functions;
 
-	/** @var \phpbb\request\request */
+	/** @var request */
 	protected $request;
 
-	/** @var \phpbb\user */
+	/** @var user */
 	protected $user;
 
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
 
-	/** @var \phpbb\db\driver\driver_interface */
+	/** @var driver_interface */
 	protected $db;
 
-	/** @var \phpbb\config\config */
+	/** @var config */
 	protected $config;
 
-	/** @var \phpbb\auth\auth */
+	/** @var auth */
 	protected $auth;
 
-	/** @var \phpbb\controller\helper */
+	/** @var helper */
 	protected $helper;
 
 	/** @var string database tables */
@@ -42,26 +51,26 @@ class listener implements EventSubscriberInterface
 
 	/**
 	* Constructor
-	* @param \sniper\mobiledevice\core\functions	$functions
-	* @param \phpbb\request\request				 	$request
-	* @param \phpbb\user							$user
-	* @param \phpbb\template\template				$template
-	* @param \phpbb\db\driver\driver_interface		$db
-	* @param \phpbb\config\config					$config
-	* @param \phpbb\auth\auth						$auth
-	* @param \phpbb\controller\helper				$helper
-	* @param \phpbb\user							$user
+	* @param functions	$functions
+	* @param request				 	$request
+	* @param user							$user
+	* @param template				$template
+	* @param driver_interface		$db
+	* @param config					$config
+	* @param auth						$auth
+	* @param helper				$helper
+	* @param user							$user
 	* @param string								 	$mobilelogs_table
 	*/
 	public function __construct(
-		\sniper\mobiledevice\core\functions $functions,
-		\phpbb\request\request $request,
-		\phpbb\user $user,
-		\phpbb\template\template $template,
-		\phpbb\db\driver\driver_interface $db,
-		\phpbb\config\config $config,
-		\phpbb\auth\auth $auth,
-		\phpbb\controller\helper $helper,
+		functions $functions,
+		request $request,
+		user $user,
+		template $template,
+		driver_interface $db,
+		config $config,
+		auth $auth,
+		helper $helper,
 		$mobilelogs_table
 	)
 	{
@@ -192,7 +201,7 @@ class listener implements EventSubscriberInterface
 		$this->user->data['is_mobile'] = $this->functions->mobile_device_detect();
 		$status = $this->functions->mobile_device_detect();
 		$this->cookie_data['mobile_name'] =	$status[1];
-		$cookie_mobile_name = $this->request->variable($this->config['cookie_name'] . '_mobile_name', '', true, \phpbb\request\request_interface::COOKIE);
+		$cookie_mobile_name = $this->request->variable($this->config['cookie_name'] . '_mobile_name', '', true, request_interface::COOKIE);
 
 		if (!$cookie_mobile_name)
 		{

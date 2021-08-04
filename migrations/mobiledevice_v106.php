@@ -9,7 +9,9 @@
 
 namespace sniper\mobiledevice\migrations;
 
-class mobiledevice_v106 extends \phpbb\db\migration\migration
+use phpbb\db\migration\migration;
+
+class mobiledevice_v106 extends migration
 {
 	static public function depends_on()
 	{

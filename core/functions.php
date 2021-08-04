@@ -9,39 +9,45 @@
 
 namespace sniper\mobiledevice\core;
 
+use phpbb\config\config;
+use phpbb\extension\manager;
+use phpbb\request\request;
+use phpbb\template\template;
+use phpbb\user;
+
 class functions
 {
-	/** @var \phpbb\request\request */
+	/** @var request */
 	protected $request;
 
-	/** @var \phpbb\user */
+	/** @var user */
 	protected $user;
 
-	/** @var \phpbb\config\config */
+	/** @var config */
 	protected $config;
 
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
 
-	/** @var \phpbb\extension\manager */
+	/** @var manager */
 	protected $extension_manager;
 
 	/**
 	* Constructor
 	*
-	* @param \phpbb\request\request		$request
-	* @param \phpbb\user				$user
-	* @param \phpbb\config\config	 	$config
-	* @param \phpbb\template\template 	$template
-	* @param \phpbb\extension\manager 	$extension_manager
+	* @param request		$request
+	* @param user				$user
+	* @param config	 	$config
+	* @param template 	$template
+	* @param manager 	$extension_manager
 	*
 	*/
 	public function __construct(
-		\phpbb\request\request $request,
-		\phpbb\user $user,
-		\phpbb\config\config $config,
-		\phpbb\template\template $template,
-		\phpbb\extension\manager $extension_manager
+		request $request,
+		user $user,
+		config $config,
+		template $template,
+		manager $extension_manager
 	)
 	{
 		$this->request				= $request;

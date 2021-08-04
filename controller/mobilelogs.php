@@ -9,33 +9,43 @@
 
 namespace sniper\mobiledevice\controller;
 
+use phpbb\auth\auth;
+use phpbb\config\config;
+use phpbb\controller\helper;
+use phpbb\db\driver\driver_interface;
+use phpbb\pagination;
+use phpbb\request\request;
+use phpbb\template\template;
+use phpbb\user;
+use sniper\mobiledevice\core\functions;
+
 class mobilelogs
 {
-	/** @var \sniper\mobiledevice\core\functions */
+	/** @var functions */
 	protected $functions;
 
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
 
-	/** @var \phpbb\user */
+	/** @var user */
 	protected $user;
 
-	/** @var \phpbb\auth\auth */
+	/** @var auth */
 	protected $auth;
 
-	/** @var \phpbb\db\driver\driver_interface */
+	/** @var driver_interface */
 	protected $db;
 
-	/** @var \phpbb\request\request */
+	/** @var request */
 	protected $request;
 
-	/** @var \phpbb\config\config */
+	/** @var config */
 	protected $config;
 
-	/** @var \phpbb\controller\helper */
+	/** @var helper */
 	protected $helper;
 
-	/** @var \phpbb\pagination */
+	/** @var pagination */
 	protected $pagination;
 
 	/** @var string database tables */
@@ -43,27 +53,27 @@ class mobilelogs
 
 	/**
 	* Constructor
-	* @param \sniper\mobiledevice\core\functions 	$functions
-	* @param \phpbb\template\template				$template
-	* @param \phpbb\user						 	$user
-	* @param \phpbb\auth\auth						$auth
-	* @param \phpbb\db\driver\driver_interface		$db
-	* @param \phpbb\request\request					$request
-	* @param \phpbb\config\config					$config
-	* @param \phpbb\controller\helper				$helper
-	* @param \phpbb\pagination						$pagination
-	* @param string									$mobilelogs_table
+	* @param functions 			$functions
+	* @param template			$template
+	* @param user				$user
+	* @param auth				$auth
+	* @param driver_interface	$db
+	* @param request			$request
+	* @param config				$config
+	* @param helper				$helper
+	* @param pagination			$pagination
+	* @param string				$mobilelogs_table
 	*/
 	public function __construct(
-		\sniper\mobiledevice\core\functions 	$functions,
-		\phpbb\template\template				$template,
-		\phpbb\user						 	$user,
-		\phpbb\auth\auth						$auth,
-		\phpbb\db\driver\driver_interface		$db,
-		\phpbb\request\request					$request,
-		\phpbb\config\config					$config,
-		\phpbb\controller\helper				$helper,
-		\phpbb\pagination						$pagination,
+		functions $functions,
+		template $template,
+		user $user,
+		auth $auth,
+		driver_interface $db,
+		request $request,
+		config $config,
+		helper $helper,
+		pagination $pagination,
 		$mobilelogs_table
 	)
 	{

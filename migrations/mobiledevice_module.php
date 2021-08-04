@@ -9,7 +9,9 @@
 
 namespace sniper\mobiledevice\migrations;
 
-class mobiledevice_module extends \phpbb\db\migration\migration
+use phpbb\db\migration\migration;
+
+class mobiledevice_module extends migration
 {
 	public function update_data()
 	{
