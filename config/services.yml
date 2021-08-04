@@ -1,0 +1,47 @@
+imports:
+    - { resource: tables.yml }
+services:
+    sniper.mobiledevice.listener:
+        class: sniper\mobiledevice\event\listener
+        arguments:
+            - '@sniper.mobiledevice.core.functions'
+            - '@request'
+            - '@user'
+            - '@template'
+            - '@dbal.conn'
+            - '@config'
+            - '@auth'
+            - '@controller.helper'
+            - '%sniper.mobiledevice.table.mobilelogs%'
+        tags:
+            - { name: event.listener }
+    sniper.mobiledevice.admin.controller:
+        class: sniper\mobiledevice\controller\admin_controller
+        arguments:
+            - '@config'
+            - '@template'
+            - '@log'
+            - '@user'
+            - '@request'
+    sniper.mobiledevice.core.functions:
+        class: sniper\mobiledevice\core\functions
+        arguments:
+            - '@request'
+            - '@user'
+            - '@config'
+            - '@template'
+            - '@ext.manager'
+    sniper.mobiledevice.controller:
+        class: sniper\mobiledevice\controller\mobilelogs
+        arguments:
+            - '@sniper.mobiledevice.core.functions'
+            - '@template'
+            - '@user'
+            - '@auth'
+            - '@dbal.conn'
+            - '@request'
+            - '@config'
+            - '@controller.helper'
+            - '@pagination'
+            - '%sniper.mobiledevice.table.mobilelogs%'
+               

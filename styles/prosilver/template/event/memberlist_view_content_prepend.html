@@ -1,0 +1,14 @@
+{% if MOBILE_PROFILE_ENABLE && (S_MOBILE_SELF || USERNAME != S_USERNAME) %}
+	{% if MOBILE_ENABLE && S_ONLINE && S_IS_MOBILE_PROFILE %}
+		<div class="welcome-mobile">
+		<div class="inner">
+			<span class="welcome-mobile-user">
+			<span class="mobile-aft1">{{ lang('MOBILE_POST_AFT1') }}</span>
+			<span class="mobile-aft2">{{ lang('MOBILE_POST_AFT2') }}</span>
+			<span class="mobile-img"> <img class="mobile-img" src="{{ BOARD_URL }}/ext/sniper/mobiledevice/images/{{ S_DEVICE_NAME_PROFILE }}.png" alt="" title="{{ S_DEVICE_NAME_PROFILE }}"/></span>
+			{{ S_DEVICE_NAME_PROFILE }}
+			</span>
+		</div>
+	</div>
+	{% endif %}
+{% endif %}
