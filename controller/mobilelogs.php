@@ -197,7 +197,7 @@ class mobilelogs
 					$this->db->sql_query($sql);
 
 					meta_refresh(3, $mobile_logs_page);
-					trigger_error($this->user->lang['MOBILE_LOGS_CLEANED']. '<br /><br />' . sprintf($this->user->lang['RETURN_PAGE'], '<a href="' . $mobile_logs_page . '">', '</a>'));
+					trigger_error($this->user->lang['MOBILE_LOGS_CLEANED']. '<br><br>' . sprintf($this->user->lang['RETURN_PAGE'], '<a href="' . $mobile_logs_page . '">', '</a>'));
 				}
 				else
 				{
