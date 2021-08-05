@@ -2,7 +2,7 @@
 /**
 *
 * Mobile Device. An extension for the phpBB Forum Software package.
-* @copyright (c) 2015-2020 Sniper_E - https://www.sniper-e.com & dmzx - https://www.dmzx-web.net & martin - https://www.martins-phpbb.com
+* @copyright (c) 2015-2021 Sniper_E - https://www.sniper-e.com & dmzx - https://www.dmzx-web.net & martin - https://www.martins-phpbb.com
 * @license GNU General Public License, version 2 (GPL-2.0)
 *
 */
@@ -36,10 +36,10 @@ class functions
 	* Constructor
 	*
 	* @param request		$request
-	* @param user				$user
-	* @param config	 	$config
-	* @param template 	$template
-	* @param manager 	$extension_manager
+	* @param user			$user
+	* @param config	 	    $config
+	* @param template 	    $template
+	* @param manager 	    $extension_manager
 	*
 	*/
 	public function __construct(

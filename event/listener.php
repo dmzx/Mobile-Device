@@ -2,7 +2,7 @@
 /**
 *
 * Mobile Device. An extension for the phpBB Forum Software package.
-* @copyright (c) 2015-2020 Sniper_E - https://www.sniper-e.com & dmzx - https://www.dmzx-web.net & martin - https://www.martins-phpbb.com
+* @copyright (c) 2015-2021 Sniper_E - https://www.sniper-e.com & dmzx - https://www.dmzx-web.net & martin - https://www.martins-phpbb.com
 * @license GNU General Public License, version 2 (GPL-2.0)
 *
 */
@@ -51,16 +51,16 @@ class listener implements EventSubscriberInterface
 
 	/**
 	* Constructor
-	* @param functions	$functions
-	* @param request				 	$request
-	* @param user							$user
-	* @param template				$template
-	* @param driver_interface		$db
-	* @param config					$config
-	* @param auth						$auth
+	* @param functions	        $functions
+	* @param request			$request
+	* @param user				$user
+	* @param template			$template
+	* @param driver_interface	$db
+	* @param config				$config
+	* @param auth				$auth
 	* @param helper				$helper
-	* @param user							$user
-	* @param string								 	$mobilelogs_table
+	* @param user				$user
+	* @param string				$mobilelogs_table
 	*/
 	public function __construct(
 		functions $functions,
