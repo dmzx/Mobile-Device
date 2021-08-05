@@ -14,7 +14,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -33,10 +33,10 @@ if (empty($lang) || !is_array($lang))
 // ’ » “ ” …
 //
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 	'ACP_MOBILEDEVICE'					=> 'Mobile Device',
 	'ACP_MOBILEDEVICE_CONFIG_SETTINGS'	=> 'Settings',
 
 	//Log
 	'LOG_ACP_MOBILEDEVICE_SETTINGS_SAVED' => '<strong>Mobile device settings saved</strong>',
-));
+]);

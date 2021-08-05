@@ -13,12 +13,12 @@ class mobiledevice_info
 {
 	function module()
 	{
-		return array(
+		return [
 			'filename'	=> '\sniper\mobiledevice\acp\mobiledevice_module',
 			'title'		=> 'ACP_MOBILEDEVICE',
-			'modes'		=> array(
-			'config'	=> array('title' => 'ACP_MOBILEDEVICE_CONFIG_SETTINGS', 'auth' => 'ext_sniper/mobiledevice && acl_a_board', 'cat' => array('ACP_MOBILEDEVICE')),
-			),
-		);
+			'modes'		=> [
+			'config'	=> ['title' => 'ACP_MOBILEDEVICE_CONFIG_SETTINGS', 'auth' => 'ext_sniper/mobiledevice && acl_a_board', 'cat' => ['ACP_MOBILEDEVICE']],
+			],
+		];
 	}
 }

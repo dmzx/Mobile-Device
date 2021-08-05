@@ -14,7 +14,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -33,7 +33,7 @@ if (empty($lang) || !is_array($lang))
 // ’ » “ ” …
 //
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 // Mobile main:
 	'ACP_MOBILEDEVICE_TITLE'					=> 'Mobile Device',
 	'ACP_MOBILEDEVICE_VERSION'				=> 'Version',
@@ -65,4 +65,4 @@ $lang = array_merge($lang, array(
 	'ACP_MOBILE_LOGS_ENABLE_EXPLAIN'			=> 'Browser user agents of visiting mobile users will be detected and logged.',
 	'ACP_MOBILE_LOGS_REFRESH'				 => 'Mobile logs refresh',
 	'ACP_MOBILE_LOGS_REFRESH_EXPLAIN'		 => 'Set time interval from 10 to 60 seconds for mobile logs refresh rate.',
-));
+]);

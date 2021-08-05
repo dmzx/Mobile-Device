@@ -14,7 +14,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -33,7 +33,7 @@ if (empty($lang) || !is_array($lang))
 // ’ » “ ” …
 //
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 // Mobile welcome
 	'POST_MADE_VIA'		=> 'Posted using my',
 	'MOBILE_DEVICE'		=> 'Mobile Device',
@@ -146,4 +146,4 @@ $lang = array_merge($lang, array(
 	'OP'			=> 'OnePlus',
 	'AI'			=> 'Acer Iconia',
 	'SGJ3'			=> 'Samsung Galaxy J3',
-));
+]);

@@ -15,18 +15,18 @@ class mobiledevice_v106 extends migration
 {
 	static public function depends_on()
 	{
-		return array(
+		return [
 			'\sniper\mobiledevice\migrations\mobiledevice_data',
-		);
+		];
 	}
 
 	public function update_data()
 	{
-		return array(
+		return [
 			// Update config
-			array('config.update', array('mobiledevice_version', '1.0.6')),
+			['config.update', ['mobiledevice_version', '1.0.6']],
 			// Add config
-			array('config.add', array('mobile_test_enable', '0')),
-		);
+			['config.add', ['mobile_test_enable', '0']],
+		];
 	}
 }

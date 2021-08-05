@@ -86,7 +86,7 @@ class admin_controller
 			trigger_error($this->user->lang('ACP_MOBILEDEVICE_CONFIG_SAVED') . adm_back_link($this->u_action));
 		}
 
-		$this->template->assign_vars(array(
+		$this->template->assign_vars([
 			'U_ACTION'						=> $this->u_action,
 			'ACP_MOBILE_ENABLE'				=> $this->config['mobile_enable'],
 			'ACP_MOBILE_TEST_ENABLE'			=> $this->config['mobile_test_enable'],
@@ -97,7 +97,7 @@ class admin_controller
 			'ACP_MOBILE_PROFILE_ENABLE'		=> $this->config['mobile_profile_enable'],
 			'ACP_MOBILE_LOGS_ENABLE'			=> $this->config['mobile_logs_enable'],
 			'ACP_MOBILEDEVICE_VERSION'		=> $this->config['mobiledevice_version'],
-		));
+		]);
 	}
 
 	/**

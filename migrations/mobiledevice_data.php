@@ -17,23 +17,23 @@ class mobiledevice_data extends migration
 
 	public function update_data()
 	{
-		return array(
+		return [
 		 // Add configs
-		 array('config.add', array('mobile_enable', '1')),
-		 array('config.add', array('mobile_welcome_enable', '1')),
-		 array('config.add', array('mobile_welcome_guest_enable', '1')),
-		 array('config.add', array('mobile_header_enable', '1')),
-		 array('config.add', array('mobile_profile_enable', '1')),
-		 array('config.add', array('mobile_logs_enable', '1')),
-		 array('config.add', array('mobile_logs_refresh', 30)),
-		 array('config.add', array('mobiledevice_version', $this->ext_version)),
+		 ['config.add', ['mobile_enable', '1']],
+		 ['config.add', ['mobile_welcome_enable', '1']],
+		 ['config.add', ['mobile_welcome_guest_enable', '1']],
+		 ['config.add', ['mobile_header_enable', '1']],
+		 ['config.add', ['mobile_profile_enable', '1']],
+		 ['config.add', ['mobile_logs_enable', '1']],
+		 ['config.add', ['mobile_logs_refresh', 30]],
+		 ['config.add', ['mobiledevice_version', $this->ext_version]],
 		 // Add permissions
-		 array('permission.add', array('u_mobile_logs_view')),
-		 array('permission.add', array('u_mobile_logs_clear')),
+		 ['permission.add', ['u_mobile_logs_view']],
+		 ['permission.add', ['u_mobile_logs_clear']],
 		 // Set permissions
-		 array('permission.permission_set', array('REGISTERED', 'u_mobile_logs_view', 'group')),
-		 array('permission.permission_set', array('GUESTS', 'u_mobile_logs_view', 'group')),
-		 array('permission.permission_set', array('ADMINISTRATORS', 'u_mobile_logs_clear', 'group')),
-		);
+		 ['permission.permission_set', ['REGISTERED', 'u_mobile_logs_view', 'group']],
+		 ['permission.permission_set', ['GUESTS', 'u_mobile_logs_view', 'group']],
+		 ['permission.permission_set', ['ADMINISTRATORS', 'u_mobile_logs_clear', 'group']],
+		];
 	}
 }

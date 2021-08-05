@@ -15,20 +15,20 @@ class mobiledevice_module extends migration
 {
 	public function update_data()
 	{
-		return array(
-			array('module.add', array(
+		return [
+			['module.add', [
 				'acp',
 				'ACP_CAT_DOT_MODS',
 				'ACP_MOBILEDEVICE'
-			)),
-			array('module.add', array(
+			]],
+			['module.add', [
 				'acp',
 				'ACP_MOBILEDEVICE',
-				array(
+				[
 					'module_basename' => '\sniper\mobiledevice\acp\mobiledevice_module',
-					'modes'			=> array('config'),
-				),
-			)),
-		);
+					'modes'			=> ['config'],
+				],
+			]],
+		];
 	}
 }

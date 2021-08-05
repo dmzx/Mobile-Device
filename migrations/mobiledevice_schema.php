@@ -15,53 +15,53 @@ class mobiledevice_schema extends migration
 {
 	public function update_schema()
 	{
-		return 	array(
-			'add_columns' => array(
-				$this->table_prefix . 'users' => array(
-					'mobile_browser'		=> array('UINT:1', 0),
-					'device_name'		 => array('VCHAR:30', null),
-					'user_mobile_welcome' => array('BOOL', 1),
-					'user_mobile_header'	=> array('BOOL', 1),
-					'user_mobile_self'	=> array('BOOL', 1),
-				),
-				$this->table_prefix . 'posts' => array(
-					'post_device_title' => array('VCHAR:30', null),
-				),
-			),
-			'add_tables'	=> array(
-				$this->table_prefix . 'mobile_logs'	=> array(
-					'COLUMNS' => array(
-					'log_id'		=> array('UINT', null, 'auto_increment'),
-					'log_ip'		=> array('VCHAR:15', ''),
-					'log_time'	=> array('INT:11', 0),
-					'device_name' => array('VCHAR:30', ''),
-					'user_name'	=> array('VCHAR:30', ''),
-					'user_agent'	=> array('VCHAR:255', ''),
-					),
+		return 	[
+			'add_columns' => [
+				$this->table_prefix . 'users' => [
+					'mobile_browser'		=> ['UINT:1', 0],
+					'device_name'		 => ['VCHAR:30', null],
+					'user_mobile_welcome' => ['BOOL', 1],
+					'user_mobile_header'	=> ['BOOL', 1],
+					'user_mobile_self'	=> ['BOOL', 1],
+				],
+				$this->table_prefix . 'posts' => [
+					'post_device_title' => ['VCHAR:30', null],
+				],
+			],
+			'add_tables'	=> [
+				$this->table_prefix . 'mobile_logs'	=> [
+					'COLUMNS' => [
+					'log_id'		=> ['UINT', null, 'auto_increment'],
+					'log_ip'		=> ['VCHAR:15', ''],
+					'log_time'	=> ['INT:11', 0],
+					'device_name' => ['VCHAR:30', ''],
+					'user_name'	=> ['VCHAR:30', ''],
+					'user_agent'	=> ['VCHAR:255', ''],
+					],
 					'PRIMARY_KEY' => 'log_id',
-				),
-			),
-		);
+				],
+			],
+		];
 	}
 
 	public function revert_schema()
 	{
-		return 	array(
-			'drop_columns' => array(
-				$this->table_prefix . 'users' => array(
+		return 	[
+			'drop_columns' => [
+				$this->table_prefix . 'users' => [
 					'mobile_browser',
 					'device_name',
 					'user_mobile_welcome',
 					'user_mobile_header',
 					'user_mobile_self',
-				),
-				$this->table_prefix . 'posts' => array(
+				],
+				$this->table_prefix . 'posts' => [
 					'post_device_title',
-				),
-			),
-			'drop_tables' => array(
+				],
+			],
+			'drop_tables' => [
 				$this->table_prefix . 'mobile_logs',
-			),
-		);
+			],
+		];
 	}
 }

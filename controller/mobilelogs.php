@@ -96,7 +96,7 @@ class mobilelogs
 		$mobile_view		= ($this->auth->acl_get('u_mobile_logs_view')) ? true : false;
 		$mobile_mode		= $this->request->variable('mode', '');
 		$log_id				= $this->request->variable('logid', 0);
-		$mobile_logs_page	= $this->helper->route('sniper_mobiledevice_controller', array('mode' => 'logs'));
+		$mobile_logs_page	= $this->helper->route('sniper_mobiledevice_controller', ['mode' => 'logs']);
 
 		$this->functions->assign_authors();
 		$this->template->assign_var('MOBILEDEVICE_FOOTER_VIEW', true);
@@ -123,7 +123,7 @@ class mobilelogs
 
 				while ($row = $this->db->sql_fetchrow($result))
 				{
-					$this->template->assign_block_vars('logs', array(
+					$this->template->assign_block_vars('logs', [
 						'DEVICE_IMAGE' => '<img src="' . $board_url . 'ext/sniper/mobiledevice/images/' . $row['device_name'] . '.png" alt="?" class="mobile-responsive" />',
 						'LOG_ID'		=> $row['log_id'],
 						'LOG_TIME'	 => $this->user->format_date($row['log_time']),
@@ -131,7 +131,7 @@ class mobilelogs
 						'USER_NAME'	=> $row['user_name'],
 						'USER_AGENT'	=> $row['user_agent'],
 						'LOG_IP'		=> $row['log_ip'],
-					));
+					]);
 				}
 				$this->db->sql_freeresult($result);
 
@@ -141,7 +141,7 @@ class mobilelogs
 				$log_count = (int) $this->db->sql_fetchfield('log_count');
 				$this->db->sql_freeresult($result);
 
-				$pagination_url = $this->helper->route('sniper_mobiledevice_controller', array('mode' => 'logs'));
+				$pagination_url = $this->helper->route('sniper_mobiledevice_controller', ['mode' => 'logs']);
 
 				$this->pagination->generate_template_pagination($pagination_url, 'pagination', 'start', $log_count, (int) $this->config['posts_per_page'], $start);
 
@@ -151,26 +151,26 @@ class mobilelogs
 
 				while ($row = $this->db->sql_fetchrow($result))
 				{
-					$this->template->assign_vars(array(
-						'U_REMOVE_LOG'		=> $this->helper->route('sniper_mobiledevice_controller', array('mode' => 'remove_log', 'logid' => (int) $row['log_id'])),
-						'U_CLEAR_LOGS'		=> $this->helper->route('sniper_mobiledevice_controller', array('mode' => 'clear_logs')),
+					$this->template->assign_vars([
+						'U_REMOVE_LOG'		=> $this->helper->route('sniper_mobiledevice_controller', ['mode' => 'remove_log', 'logid' => (int) $row['log_id']]),
+						'U_CLEAR_LOGS'		=> $this->helper->route('sniper_mobiledevice_controller', ['mode' => 'clear_logs']),
 						'U_MOBILE_VIEW_LOGS'	=> $mobile_view,
 						'U_MOBILE_CLEAR_LOGS' => $mobile_clear_logs,
 						'COUNT'				=> $log_count,
-					));
+					]);
 				}
 				$this->db->sql_freeresult($result);
 
-				$this->template->assign_block_vars('navlinks', array(
+				$this->template->assign_block_vars('navlinks', [
 					'FORUM_NAME'	=> $page_title,
-					'U_VIEW_FORUM' => $this->helper->route('sniper_mobiledevice_controller', array('mode' => 'logs')),
-				));
+					'U_VIEW_FORUM' => $this->helper->route('sniper_mobiledevice_controller', ['mode' => 'logs']),
+				]);
 
 				page_header($page_title);
 
-				$this->template->set_filenames(array(
+				$this->template->set_filenames([
 					'body' => 'logs_body.html',
-				));
+				]);
 
 				page_footer();
 
