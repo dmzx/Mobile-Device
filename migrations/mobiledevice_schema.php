@@ -18,11 +18,11 @@ class mobiledevice_schema extends migration
 		return 	[
 			'add_columns' => [
 				$this->table_prefix . 'users' => [
-					'mobile_browser'		=> ['UINT:1', 0],
-					'device_name'		 => ['VCHAR:30', null],
+					'mobile_browser' => ['UINT:1', 0],
+					'device_name' => ['VCHAR:30', null],
 					'user_mobile_welcome' => ['BOOL', 1],
-					'user_mobile_header'	=> ['BOOL', 1],
-					'user_mobile_self'	=> ['BOOL', 1],
+					'user_mobile_header' => ['BOOL', 1],
+					'user_mobile_self' => ['BOOL', 1],
 				],
 				$this->table_prefix . 'posts' => [
 					'post_device_title' => ['VCHAR:30', null],
@@ -31,12 +31,12 @@ class mobiledevice_schema extends migration
 			'add_tables'	=> [
 				$this->table_prefix . 'mobile_logs'	=> [
 					'COLUMNS' => [
-					'log_id'		=> ['UINT', null, 'auto_increment'],
-					'log_ip'		=> ['VCHAR:15', ''],
-					'log_time'	=> ['INT:11', 0],
+					'log_id' => ['UINT', null, 'auto_increment'],
+					'log_ip' => ['VCHAR:15', ''],
+					'log_time' => ['INT:11', 0],
 					'device_name' => ['VCHAR:30', ''],
-					'user_name'	=> ['VCHAR:30', ''],
-					'user_agent'	=> ['VCHAR:255', ''],
+					'user_name' => ['VCHAR:30', ''],
+					'user_agent' => ['VCHAR:255', ''],
 					],
 					'PRIMARY_KEY' => 'log_id',
 				],

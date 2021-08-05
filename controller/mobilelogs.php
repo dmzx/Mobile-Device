@@ -152,11 +152,11 @@ class mobilelogs
 				while ($row = $this->db->sql_fetchrow($result))
 				{
 					$this->template->assign_vars([
-						'U_REMOVE_LOG'		=> $this->helper->route('sniper_mobiledevice_controller', ['mode' => 'remove_log', 'logid' => (int) $row['log_id']]),
-						'U_CLEAR_LOGS'		=> $this->helper->route('sniper_mobiledevice_controller', ['mode' => 'clear_logs']),
+						'U_REMOVE_LOG'		    => $this->helper->route('sniper_mobiledevice_controller', ['mode' => 'remove_log', 'logid' => (int) $row['log_id']]),
+						'U_CLEAR_LOGS'		    => $this->helper->route('sniper_mobiledevice_controller', ['mode' => 'clear_logs']),
 						'U_MOBILE_VIEW_LOGS'	=> $mobile_view,
-						'U_MOBILE_CLEAR_LOGS' => $mobile_clear_logs,
-						'COUNT'				=> $log_count,
+						'U_MOBILE_CLEAR_LOGS'   => $mobile_clear_logs,
+						'COUNT'				    => $log_count,
 					]);
 				}
 				$this->db->sql_freeresult($result);

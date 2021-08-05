@@ -214,8 +214,8 @@ class listener implements EventSubscriberInterface
 			$device_name = $this->request->variable('device_name', $status[1]);
 
 			$user_array = [
-				'mobile_browser' 	=> $mobile_browser,
-				'device_name' 		=> $device_name
+				'mobile_browser' 	=> (string) $mobile_browser,
+				'device_name' 		=> (string) $device_name
 			];
 
 			$sql = 'UPDATE ' . USERS_TABLE . '
@@ -229,8 +229,8 @@ class listener implements EventSubscriberInterface
 			$device_name = $this->request->variable('device_name', '');
 
 			$user_array = [
-				'mobile_browser' 	=> $mobile_browser,
-				'device_name' 		=> $device_name
+				'mobile_browser' 	=> (string) $mobile_browser,
+				'device_name' 		=> (string) $device_name
 			];
 
 			$sql = 'UPDATE ' . USERS_TABLE . '
@@ -246,8 +246,8 @@ class listener implements EventSubscriberInterface
 		$device_name = $this->request->variable('device_name', '');
 
 		$user_array = [
-			'mobile_browser' 	=> $mobile_browser,
-			'device_name' 		=> $device_name
+			'mobile_browser' 	=> (string) $mobile_browser,
+			'device_name' 		=> (string) $device_name
 		];
 
 		$sql = 'UPDATE ' . USERS_TABLE . '

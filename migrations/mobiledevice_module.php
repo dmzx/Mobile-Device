@@ -26,7 +26,7 @@ class mobiledevice_module extends migration
 				'ACP_MOBILEDEVICE',
 				[
 					'module_basename' => '\sniper\mobiledevice\acp\mobiledevice_module',
-					'modes'			=> ['config'],
+					'modes' => ['config'],
 				],
 			]],
 		];
