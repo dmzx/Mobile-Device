@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB Extension - Mobile Device
-* @copyright (c) 2015-2019 Sniper_E - http://www.sniper-e.com & dmzx - https://www.dmzx-web.net & martin - http://www.martins-phpbb.com
+* @copyright (c) 2015-2021 Sniper_E - http://www.sniper-e.com & dmzx - https://www.dmzx-web.net & martin - https://www.martins-phpbb-test.com
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
