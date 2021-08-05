@@ -78,9 +78,9 @@ class mobilelogs
 	)
 	{
 		$this->functions		= $functions;
-		$this->template		    = $template;
-		$this->user			    = $user;
-		$this->auth			    = $auth;
+		$this->template			= $template;
+		$this->user				= $user;
+		$this->auth				= $auth;
 		$this->db				= $db;
 		$this->request			= $request;
 		$this->config			= $config;
@@ -95,7 +95,7 @@ class mobilelogs
 		$mobile_clear_logs = ($this->auth->acl_get('u_mobile_logs_clear')) ? true : false;
 		$mobile_view		= ($this->auth->acl_get('u_mobile_logs_view')) ? true : false;
 		$mobile_mode		= $this->request->variable('mode', '');
-		$log_id			    = $this->request->variable('logid', 0);
+		$log_id				= $this->request->variable('logid', 0);
 		$mobile_logs_page	= $this->helper->route('sniper_mobiledevice_controller', array('mode' => 'logs'));
 
 		$this->functions->assign_authors();

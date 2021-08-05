@@ -40,7 +40,7 @@ class admin_controller
 	 *
 	 * @param config		$config
 	 * @param template		$template
-	 * @param log 	        $log
+	 * @param log 			$log
 	 * @param user			$user
 	 * @param request		$request
 	 */
