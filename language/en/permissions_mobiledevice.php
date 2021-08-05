@@ -1,7 +1,7 @@
 <?php
 /**
 *
-* @package phpBB Extension - Mobile Device
+* Mobile Device. An extension for the phpBB Forum Software package.
 * @copyright (c) 2015-2021 Sniper_E - http://www.sniper-e.com & dmzx - https://www.dmzx-web.net & martin - https://www.martins-phpbb-test.com
 * @license GNU General Public License, version 2 (GPL-2.0)
 *
