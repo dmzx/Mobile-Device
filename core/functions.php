@@ -37,9 +37,9 @@ class functions
 	*
 	* @param request		$request
 	* @param user			$user
-	* @param config	 	    $config
-	* @param template 	    $template
-	* @param manager 	    $extension_manager
+	* @param config	 		$config
+	* @param template 		$template
+	* @param manager 		$extension_manager
 	*
 	*/
 	public function __construct(

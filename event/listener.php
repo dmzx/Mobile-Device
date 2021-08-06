@@ -51,7 +51,7 @@ class listener implements EventSubscriberInterface
 
 	/**
 	* Constructor
-	* @param functions	        $functions
+	* @param functions			$functions
 	* @param request			$request
 	* @param user				$user
 	* @param template			$template
@@ -153,7 +153,7 @@ class listener implements EventSubscriberInterface
 
 		$this->template->assign_vars([
 			'S_IS_MOBILE_PROFILE'	=> ($member['mobile_browser']),
-			'S_DEVICE_NAME_PROFILE' => ($member['device_name']),
+			'DEVICE_NAME_PROFILE' => ($member['device_name']),
 		]);
 	}
 
