@@ -1,4 +1,4 @@
-{% if S_MOBILE_ENABLE && MOBILE_LOGS_ENABLE && U_MOBILE_VIEW_LOGS %}
+{% if S_MOBILE_ENABLE && S_MOBILE_LOGS_ENABLE && U_MOBILE_VIEW_LOGS %}
 <li data-last-responsive="true">
 	<a href="{{ U_MOBILE_LOGS }}" onclick="popup('{{ U_MOBILE_LOGS }}', 1300, 700); return false;" title="{{ lang('MOBILE_LOGS') }}" role="menuitem">
 		<i class="icon fa fa-mobile fa-fw" aria-hidden="true"></i><span>{{ lang('MOBILE_LOGS') }}</span>
