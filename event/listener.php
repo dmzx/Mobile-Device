@@ -313,7 +313,7 @@ class listener implements EventSubscriberInterface
 			'U_MOBILE_CLEAR_LOGS'		 	=> $this->auth->acl_get('u_mobile_logs_clear') ? true : false,
 			'S_MOBILE_ENABLE'				=> $this->config['mobile_enable'],
 			'S_MOBILE_WELCOME_ENABLE'		=> $this->config['mobile_welcome_enable'],
-			'MOBILE_WELCOME_GUEST_ENABLE' 	=> $this->config['mobile_welcome_guest_enable'],
+			'S_MOBILE_WELCOME_GUEST_ENABLE' => $this->config['mobile_welcome_guest_enable'],
 			'MOBILE_HEADER_ENABLE'			=> $this->config['mobile_header_enable'],
 			'MOBILE_PROFILE_ENABLE'			=> $this->config['mobile_profile_enable'],
 			'MOBILE_LOGS_ENABLE'			=> $this->config['mobile_logs_enable'],
