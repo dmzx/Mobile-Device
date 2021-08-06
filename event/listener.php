@@ -314,7 +314,7 @@ class listener implements EventSubscriberInterface
 			'S_MOBILE_ENABLE'				=> $this->config['mobile_enable'],
 			'S_MOBILE_WELCOME_ENABLE'		=> $this->config['mobile_welcome_enable'],
 			'S_MOBILE_WELCOME_GUEST_ENABLE' => $this->config['mobile_welcome_guest_enable'],
-			'MOBILE_HEADER_ENABLE'			=> $this->config['mobile_header_enable'],
+			'S_MOBILE_HEADER_ENABLE'		=> $this->config['mobile_header_enable'],
 			'MOBILE_PROFILE_ENABLE'			=> $this->config['mobile_profile_enable'],
 			'MOBILE_LOGS_ENABLE'			=> $this->config['mobile_logs_enable'],
 			'MOBILEDEVICE_VERSION'			=> $this->config['mobiledevice_version'],
