@@ -1,4 +1,4 @@
-{% if (MOBILE_WELCOME_ENABLE && S_USER_LOGGED_IN) || (MOBILE_WELCOME_GUEST_ENABLE && not S_USER_LOGGED_IN) %}
+{% if (S_MOBILE_WELCOME_ENABLE && S_USER_LOGGED_IN) || (MOBILE_WELCOME_GUEST_ENABLE && not S_USER_LOGGED_IN) %}
 	{% if S_MOBILE_ENABLE && S_MOBILE_WELCOME && MOBILE_NAME && SCRIPT_NAME == "index" %}
 	<div class="welcome-mobile">
 		<div class="inner">
