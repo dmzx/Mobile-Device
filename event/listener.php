@@ -303,7 +303,6 @@ class listener implements EventSubscriberInterface
 
 		$this->template->assign_vars([
 			'S_IS_MOBILE'				 	=> $this->user->data['mobile_browser'],
-			'S_DEVICE_NAME'					=> $this->user->data['device_name'],
 			'MOBILE_NAME'					=> $this->cookie_data['mobile_name'],
 			'S_MOBILE_WELCOME'				=> $this->user->data['user_mobile_welcome'],
 			'S_MOBILE_HEADER'			 	=> $this->user->data['user_mobile_header'],
