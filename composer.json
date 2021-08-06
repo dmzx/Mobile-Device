@@ -3,8 +3,8 @@
 	"type": "phpbb-extension",
 	"description": "Adds [ Post made via Mobile Device ] when posting from a mobile device. Welcome mobile user message on index page showing user's mobile device. Displays logged in user's mobile image in header navbar on all other pages. Displays user is on their mobile in topic mini-profile and profile page. Mobile Logs popup to view mobile device visitors. Selections in UCP -> Board preferences -> Edit display for user options. Selections in ACP -> Extensions -> Mobile device -> Settings for enabling features. Permissions -> Misc for selecting who can view logs and who can clear logs.",
 	"homepage": "https://sniper-e.com",
-	"version": "1.0.8",
-	"time": "2020-05-13",
+	"version": "1.0.9",
+	"time": "2021-08-06",
 	"keywords": [
 		"phpbb",
 		"extension",
