@@ -296,7 +296,7 @@ class listener implements EventSubscriberInterface
 				];
 
 				$sql = 'UPDATE ' . $this->mobilelogs_table . ' SET ' . $this->db->sql_build_array('UPDATE', $sql_ary) . '
-					WHERE ' . $this->db->sql_in_set('log_ip', $this->user->ip);
+					WHERE log_ip = \'' . $this->db->sql_escape($this->user->ip) . "'";
 				$this->db->sql_query($sql);
 			}
 		}
