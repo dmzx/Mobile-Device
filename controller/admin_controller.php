@@ -79,13 +79,13 @@ class admin_controller
 				trigger_error('FORM_INVALID');
 			}
 
-			// Check, if entered mobile refresh is 10 or below
+			// Check, if entered mobile refresh is min value
 			if ($mobile_logs_refresh < 10)
 			{
 				trigger_error($this->user->lang['ACP_MOBILEDEVICE_MOBILE_LOGS_REFRESH_MIN'] . adm_back_link($this->u_action), E_USER_WARNING);
 			}
 
-			// Check entered mobile refresh value - has to be max 60
+			// Check entered mobile refresh value is max value
 			if ($mobile_logs_refresh > 60)
 			{
 				trigger_error($this->user->lang['ACP_MOBILEDEVICE_MOBILE_LOGS_REFRESH_MAX'] . adm_back_link($this->u_action), E_USER_WARNING);
