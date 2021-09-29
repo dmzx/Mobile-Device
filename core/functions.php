@@ -59,7 +59,6 @@ class functions
 
 	public function mobile_device_detect($iphone = true, $ipod = true, $ipad = true, $android = true, $opera = true, $blackberry = true, $palm = true, $windows = true)
 	{
-		$mobile_browser	= false;
 		$user_agent	 = $this->request->server('HTTP_USER_AGENT');
 
 		switch (true)
