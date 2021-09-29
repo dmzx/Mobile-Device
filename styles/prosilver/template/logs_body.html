@@ -1,4 +1,5 @@
 {% if S_MOBILE_ENABLE && S_MOBILE_LOGS_ENABLE && U_MOBILE_VIEW_LOGS %}
+{% if S_MOBILE_ENABLE && S_MOBILE_LOGS_ENABLE && U_MOBILE_VIEW_LOGS %}
 {% INCLUDE 'simple_header.html' %}
 
 <div id="mobilelogsload"></div>
@@ -69,7 +70,7 @@
 </div>
 {% endif %}
 
-<script type="text/javascript">
+<script>
 	function refreshpage(interval, countdownel, totalel){
 		var countdownel = document.getElementById(countdownel)
 		var totalel = document.getElementById(totalel)
