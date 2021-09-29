@@ -42,7 +42,7 @@ $lang = array_merge($lang, [
 	'ACP_MOBILEDEVICE_SETTINGS'				=> 'Mobile device settings',
 // Mobile discription:
 	'ACP_MOBILEDEVICE_EXT_DESC_TITLE'		=> 'Mobile device description',
-	'ACP_MOBILEDEVICE_EXT_DESC'             => '<div style="margin: 0 10px">Adds [ Post made via Mobile Device ] when posting from a mobile device. Welcome mobile user message on index page showing user&#39;s mobile device. Displays logged in user&#39;s mobile image in header navbar on all other pages. Displays user is on their mobile in topic mini-profile and profile page. Mobile Logs popup to view mobile device visitors. Selections in UCP -> Board preferences -> Edit display for user options. Selections in ACP -> Extensions -> Mobile device -> Settings for enabling features. Permissions -> Misc for selecting who can view logs and who can clear logs.</div>',
+	'ACP_MOBILEDEVICE_EXT_DESC'			 => '<div style="margin: 0 10px">Adds [ Post made via Mobile Device ] when posting from a mobile device. Welcome mobile user message on index page showing user&#39;s mobile device. Displays logged in user&#39;s mobile image in header navbar on all other pages. Displays user is on their mobile in topic mini-profile and profile page. Mobile Logs popup to view mobile device visitors. Selections in UCP -> Board preferences -> Edit display for user options. Selections in ACP -> Extensions -> Mobile device -> Settings for enabling features. Permissions -> Misc for selecting who can view logs and who can clear logs.</div>',
 // General option:
 	'ACP_MOBILEDEVICE_CONFIG'				=> 'General option',
 	'ACP_MOBILE_ENABLE'						=> 'Enable mobile device',

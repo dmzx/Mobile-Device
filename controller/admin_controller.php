@@ -101,16 +101,16 @@ class admin_controller
 		}
 
 		$this->template->assign_vars([
-			'U_ACTION'						    => $this->u_action,
-			'ACP_MOBILE_ENABLE'				    => $this->config['mobile_enable'],
+			'U_ACTION'							=> $this->u_action,
+			'ACP_MOBILE_ENABLE'					=> $this->config['mobile_enable'],
 			'ACP_MOBILE_TEST_ENABLE'			=> $this->config['mobile_test_enable'],
-			'ACP_MOBILE_LOGS_REFRESH'		    => $this->config['mobile_logs_refresh'],
-			'ACP_MOBILE_WELCOME_ENABLE'		    => $this->config['mobile_welcome_enable'],
-			'ACP_MOBILE_WELCOME_GUEST_ENABLE'   => $this->config['mobile_welcome_guest_enable'],
-			'ACP_MOBILE_HEADER_ENABLE'		    => $this->config['mobile_header_enable'],
-			'ACP_MOBILE_PROFILE_ENABLE'		    => $this->config['mobile_profile_enable'],
+			'ACP_MOBILE_LOGS_REFRESH'			=> $this->config['mobile_logs_refresh'],
+			'ACP_MOBILE_WELCOME_ENABLE'			=> $this->config['mobile_welcome_enable'],
+			'ACP_MOBILE_WELCOME_GUEST_ENABLE'	=> $this->config['mobile_welcome_guest_enable'],
+			'ACP_MOBILE_HEADER_ENABLE'			=> $this->config['mobile_header_enable'],
+			'ACP_MOBILE_PROFILE_ENABLE'			=> $this->config['mobile_profile_enable'],
 			'ACP_MOBILE_LOGS_ENABLE'			=> $this->config['mobile_logs_enable'],
-			'ACP_MOBILEDEVICE_VERSION'		    => $this->config['mobiledevice_version'],
+			'ACP_MOBILEDEVICE_VERSION'			=> $this->config['mobiledevice_version'],
 		]);
 	}
 
