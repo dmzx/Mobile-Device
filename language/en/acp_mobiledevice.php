@@ -35,25 +35,25 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, [
 // Mobile main:
-	'ACP_MOBILEDEVICE_TITLE'					=> 'Mobile Device',
+	'ACP_MOBILEDEVICE_TITLE'				=> 'Mobile Device',
 	'ACP_MOBILEDEVICE_VERSION'				=> 'Version',
 	'ACP_MOBILEDEVICE_DESC'					=> 'Manage which mobile device features will be displayed on your board.',
 	'ACP_MOBILEDEVICE_CONFIG_SAVED'			=> 'Mobile device settings saved',
 	'ACP_MOBILEDEVICE_SETTINGS'				=> 'Mobile device settings',
 // Mobile discription:
-	'ACP_MOBILEDEVICE_EXT_DESC_TITLE'		 => 'Mobile device description',
-	'ACP_MOBILEDEVICE_EXT_DESC'				=> '<div style="margin: 0 10px">Adds [ Post made via Mobile Device ] when posting from a mobile device. Welcome mobile user message on index page showing user&#39;s mobile device. Displays logged in user&#39;s mobile image in header navbar on all other pages. Displays user is on their mobile in topic mini-profile and profile page. Mobile Logs popup to view mobile device visitors. Selections in UCP -> Board preferences -> Edit display for user options. Selections in ACP -> Extensions -> Mobile device -> Settings for enabling features. Permissions -> Misc for selecting who can view logs and who can clear logs.</div>',
+	'ACP_MOBILEDEVICE_EXT_DESC_TITLE'		=> 'Mobile device description',
+	'ACP_MOBILEDEVICE_EXT_DESC'             => '<div style="margin: 0 10px">Adds [ Post made via Mobile Device ] when posting from a mobile device. Welcome mobile user message on index page showing user&#39;s mobile device. Displays logged in user&#39;s mobile image in header navbar on all other pages. Displays user is on their mobile in topic mini-profile and profile page. Mobile Logs popup to view mobile device visitors. Selections in UCP -> Board preferences -> Edit display for user options. Selections in ACP -> Extensions -> Mobile device -> Settings for enabling features. Permissions -> Misc for selecting who can view logs and who can clear logs.</div>',
 // General option:
-	'ACP_MOBILEDEVICE_CONFIG'				 => 'General option',
+	'ACP_MOBILEDEVICE_CONFIG'				=> 'General option',
 	'ACP_MOBILE_ENABLE'						=> 'Enable mobile device',
 	'ACP_MOBILE_ENABLE_EXPLAIN'				=> 'Enable mobile device detection to run on your board.',
-	'ACP_MOBILE_TEST_ENABLE'					=> 'Enable test mobile device',
-	'ACP_MOBILE_TEST_ENABLE_EXPLAIN'			=> 'Enable test mobile device for testing with desktop.',
+	'ACP_MOBILE_TEST_ENABLE'				=> 'Enable test mobile device',
+	'ACP_MOBILE_TEST_ENABLE_EXPLAIN'		=> 'Enable test mobile device for testing with desktop.',
 // Display options:
-	'ACP_MOBILEDEVICE_CONFIG_SET'			 => 'Display options',
+	'ACP_MOBILEDEVICE_CONFIG_SET'			=> 'Display options',
 	'ACP_MOBILE_WELCOME_ENABLE'				=> 'Enable mobile welcome',
 	'ACP_MOBILE_WELCOME_ENABLE_EXPLAIN'		=> 'Display mobile welcome message on index to all registered users.',
-	'ACP_MOBILE_WELCOME_GUEST_ENABLE'		 => 'Enable guest mobile welcome',
+	'ACP_MOBILE_WELCOME_GUEST_ENABLE'		=> 'Enable guest mobile welcome',
 	'ACP_MOBILE_WELCOME_GUEST_ENABLE_EXPLAIN' => 'Display mobile welcome message on index to all guests.',
 	'ACP_MOBILE_HEADER_ENABLE'				=> 'Enable mobile header',
 	'ACP_MOBILE_HEADER_ENABLE_EXPLAIN'		=> 'Display mobile user&#39;s device image in header navbar.',
@@ -61,8 +61,10 @@ $lang = array_merge($lang, [
 	'ACP_MOBILE_PROFILE_ENABLE_EXPLAIN'		=> 'Display mobile message in posts and profiles to all users.',
 // Mobile logs option:
 	'ACP_MOBILE_LOGS_SETTINGS'				=> 'Mobile logs option',
-	'ACP_MOBILE_LOGS_ENABLE'					=> 'Enable mobile logs',
-	'ACP_MOBILE_LOGS_ENABLE_EXPLAIN'			=> 'Browser user agents of visiting mobile users will be detected and logged.',
-	'ACP_MOBILE_LOGS_REFRESH'				 => 'Mobile logs refresh',
-	'ACP_MOBILE_LOGS_REFRESH_EXPLAIN'		 => 'Set time interval from 10 to 60 seconds for mobile logs refresh rate.',
+	'ACP_MOBILE_LOGS_ENABLE'				=> 'Enable mobile logs',
+	'ACP_MOBILE_LOGS_ENABLE_EXPLAIN'		=> 'Browser user agents of visiting mobile users will be detected and logged.',
+	'ACP_MOBILE_LOGS_REFRESH'				=> 'Mobile logs refresh',
+	'ACP_MOBILE_LOGS_REFRESH_EXPLAIN'		=> 'Set time interval from 10 to 60 seconds for mobile logs refresh rate.',
+	'ACP_MOBILEDEVICE_MOBILE_LOGS_REFRESH_MIN'		=> 'Set time to low.',
+	'ACP_MOBILEDEVICE_MOBILE_LOGS_REFRESH_MAX'		=> 'Set time to high.',
 ]);

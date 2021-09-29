@@ -72,9 +72,23 @@ class admin_controller
 		// Is the form being submitted to us?
 		if ($this->request->is_set_post('submit'))
 		{
+			$mobile_logs_refresh = $this->request->variable('mobile_logs_refresh', '');
+
 			if (!check_form_key('acp_mobiledevice_config'))
 			{
 				trigger_error('FORM_INVALID');
+			}
+
+			// Check, if entered mobile refresh is 10 or below
+			if ($mobile_logs_refresh < 10)
+			{
+				trigger_error($this->user->lang['ACP_MOBILEDEVICE_MOBILE_LOGS_REFRESH_MIN'] . adm_back_link($this->u_action), E_USER_WARNING);
+			}
+
+			// Check entered mobile refresh value - has to be max 60
+			if ($mobile_logs_refresh > 60)
+			{
+				trigger_error($this->user->lang['ACP_MOBILEDEVICE_MOBILE_LOGS_REFRESH_MAX'] . adm_back_link($this->u_action), E_USER_WARNING);
 			}
 
 			// Set the options the user configured
@@ -87,16 +101,16 @@ class admin_controller
 		}
 
 		$this->template->assign_vars([
-			'U_ACTION'						=> $this->u_action,
-			'ACP_MOBILE_ENABLE'				=> $this->config['mobile_enable'],
+			'U_ACTION'						    => $this->u_action,
+			'ACP_MOBILE_ENABLE'				    => $this->config['mobile_enable'],
 			'ACP_MOBILE_TEST_ENABLE'			=> $this->config['mobile_test_enable'],
-			'ACP_MOBILE_LOGS_REFRESH'		 => $this->config['mobile_logs_refresh'],
-			'ACP_MOBILE_WELCOME_ENABLE'		=> $this->config['mobile_welcome_enable'],
-			'ACP_MOBILE_WELCOME_GUEST_ENABLE' => $this->config['mobile_welcome_guest_enable'],
-			'ACP_MOBILE_HEADER_ENABLE'		=> $this->config['mobile_header_enable'],
-			'ACP_MOBILE_PROFILE_ENABLE'		=> $this->config['mobile_profile_enable'],
+			'ACP_MOBILE_LOGS_REFRESH'		    => $this->config['mobile_logs_refresh'],
+			'ACP_MOBILE_WELCOME_ENABLE'		    => $this->config['mobile_welcome_enable'],
+			'ACP_MOBILE_WELCOME_GUEST_ENABLE'   => $this->config['mobile_welcome_guest_enable'],
+			'ACP_MOBILE_HEADER_ENABLE'		    => $this->config['mobile_header_enable'],
+			'ACP_MOBILE_PROFILE_ENABLE'		    => $this->config['mobile_profile_enable'],
 			'ACP_MOBILE_LOGS_ENABLE'			=> $this->config['mobile_logs_enable'],
-			'ACP_MOBILEDEVICE_VERSION'		=> $this->config['mobiledevice_version'],
+			'ACP_MOBILEDEVICE_VERSION'		    => $this->config['mobiledevice_version'],
 		]);
 	}
 
