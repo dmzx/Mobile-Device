@@ -124,11 +124,11 @@ class mobilelogs
 				while ($row = $this->db->sql_fetchrow($result))
 				{
 					$this->template->assign_block_vars('logs', [
-						'DEVICE_IMAGE' => '<img src="' . $board_url . 'ext/sniper/mobiledevice/images/' . $row['device_name'] . '.png" alt="?" class="mobile-responsive" />',
+						'DEVICE_IMAGE'  => '<img src="' . $board_url . 'ext/sniper/mobiledevice/images/' . $row['device_name'] . '.png" alt="?" class="mobile-responsive" />',
 						'LOG_ID'		=> $row['log_id'],
-						'LOG_TIME'	 => $this->user->format_date($row['log_time']),
+						'LOG_TIME'	    => $this->user->format_date($row['log_time']),
 						'DEVICE_NAME'	=> $row['device_name'],
-						'USER_NAME'	=> $row['user_name'],
+						'USER_NAME'	    => $row['user_name'],
 						'USER_AGENT'	=> $row['user_agent'],
 						'LOG_IP'		=> $row['log_ip'],
 					]);
@@ -163,7 +163,7 @@ class mobilelogs
 
 				$this->template->assign_block_vars('navlinks', [
 					'FORUM_NAME'	=> $page_title,
-					'U_VIEW_FORUM' => $this->helper->route('sniper_mobiledevice_controller', ['mode' => 'logs']),
+					'U_VIEW_FORUM'  => $this->helper->route('sniper_mobiledevice_controller', ['mode' => 'logs']),
 				]);
 
 				page_header($page_title);
